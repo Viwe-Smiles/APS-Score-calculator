@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APS CALCULATOR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+	.visually-hidden {
+	  position: absolute;
+	  width: 1px;
+	  height: 1px;
+	  padding: 0;
+	  margin: -1px;
+	  overflow: hidden;
+	  clip: rect(0,0,0,0);
+	  border: 0;
+	}
+  </style>
+</head>
+<body>
+  <div class="left-half">
+	<p>
+	  "Your future is created by what you do today, not tomorrow."
+	  "University is not the end of the journey, it is the start of a bigger adventure."
+	  "Dream big, work hard, and stay focused—the world is waiting for your greatness."
+	  "Education is the passport to the future, and tomorrow belongs to those who prepare today."
+	  "The transition may feel scary, but remember: every expert was once a beginner."
+	  "Step into this new chapter with courage—the best is yet to come."
+	  "University will challenge you, but it will also shape you into the person you are meant to become."
+	</p>
+  </div>
+  <div class="right-half">
+	<div class="content-wrapper">
+	  <h1>APS Score Calculator</h1>
+	  <form id="apsForm">
+		<div class="subject-row">
+		  <input type="text" name="subjectSearch" placeholder="Type to search subject..." title="If your subject is not appearing on the dropdown column, please try another keyword." />
+		  <label for="subjectSelect" class="visually-hidden">Subject</label>
+		  <select id="subjectSelect" name="subject" required></select>
+		  <label for="levelSelect" class="visually-hidden">Level</label>
+		  <select id="levelSelect" name="level" required>
+			<option value="" disabled selected>Level</option>
+			<option value="7">7</option>
+			<option value="6">6</option>
+			<option value="5">5</option>
+			<option value="4">4</option>
+			<option value="3">3</option>
+			<option value="2">2</option>
+			<option value="1">1</option>
+		  </select>
+		  <input type="number" name="percentage" placeholder="Percentage (%)" min="0" max="100" required />
+		</div>
+		<div id="moreSubjects"></div>
+		<button type="button" id="addSubject">Add Another Subject</button>
+		<button type="submit">Calculate APS</button>
+	  </form>
+	  <div id="result"></div>
+	</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

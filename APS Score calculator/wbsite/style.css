@@ -1,0 +1,150 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  background: #200122;
+  background: -webkit-linear-gradient(to right, #6f0000, #200122);
+  background: linear-gradient(to right, #6f0000, #200122);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.left-half {
+  width: 30vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.left-half p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #fff;
+  max-width: 90%;
+  text-align: left;
+}
+
+.right-half {
+  width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 40px 0 40px 0;
+  margin: 10px;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin-right: 0;
+  margin-left: auto;
+  background: rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
+h1 { 
+  text-align: center; 
+  color: #fff; 
+}
+
+.subject-row {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+select, input {
+  padding: 5px;
+  font-size: 1em;
+  flex: 1;
+  background: #111;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1em;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background: #333;
+  color: #fff;
+}
+
+#result {
+  margin-top: 20px;
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(255,255,255,0.1);
+}
+
+#result h3 {
+  color: #4CAF50;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#result h4 {
+  color: #2196F3;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+#result ul {
+  margin-left: 20px;
+}
+
+#result li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .left-half, .right-half {
+    width: 100vw;
+    min-width: 0;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  body {
+    flex-direction: column;
+  }
+  
+  .subject-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
